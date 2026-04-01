@@ -62,11 +62,11 @@ It blends social creativity with cutting-edge AI to turn imagination into visual
 Add images inside `/public`:
 
 ```md
-![Landing Page](public/anigenlanding.png)
-![](public/anigenauth.png)
-![](public/anigen1.png)
-![](public/anigen2.png)
-![](public/anigen3.png)
+![Landing Page](./public/anigenlanding.png)
+![](./public/anigenauth.png)
+![](./public/anigen1.png)
+![](./public/anigen2.png)
+![](./public/anigen3.png)
 ```
 
 ---
