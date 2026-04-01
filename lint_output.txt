@@ -1,0 +1,87 @@
+
+> anigen@0.1.0 lint
+> eslint
+
+
+/Users/sharayu/Desktop/anigen/app/api/generate/avatar/route.ts
+  24:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/sharayu/Desktop/anigen/app/api/generate/finalize/route.ts
+  56:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/sharayu/Desktop/anigen/app/dashboard/page.tsx
+   10:42  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+   28:6   warning  React Hook useEffect has a missing dependency: 'supabase'. Either include it or remove the dependency array                                                                                                                                                                              react-hooks/exhaustive-deps
+  142:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/sharayu/Desktop/anigen/app/dashboard/profile/page.tsx
+  37:6   warning  React Hook useEffect has a missing dependency: 'supabase'. Either include it or remove the dependency array                                                                                                                                                                              react-hooks/exhaustive-deps
+  80:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/sharayu/Desktop/anigen/app/rooms/[roomId]/page.tsx
+   6:10  warning  'Users' is defined but never used                                                                            @typescript-eslint/no-unused-vars
+  10:36  error    Unexpected any. Specify a different type                                                                     @typescript-eslint/no-explicit-any
+  11:52  error    Unexpected any. Specify a different type                                                                     @typescript-eslint/no-explicit-any
+  12:52  error    Unexpected any. Specify a different type                                                                     @typescript-eslint/no-explicit-any
+  57:6   warning  React Hook useEffect has a missing dependency: 'supabase'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/Users/sharayu/Desktop/anigen/app/view/[id]/page.tsx
+   10:38   error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+   11:40   error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+   38:6    warning  React Hook useEffect has a missing dependency: 'supabase'. Either include it or remove the dependency array                                                                                                                                                                              react-hooks/exhaustive-deps
+  144:23   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  148:92   error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  148:108  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  172:23   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  197:104  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+/Users/sharayu/Desktop/anigen/components/auth/AuthForm.tsx
+   34:19  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  115:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/sharayu/Desktop/anigen/components/avatar/AvatarCreator.tsx
+   83:72  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  160:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/sharayu/Desktop/anigen/components/editor/StoryEditor.tsx
+   5:10  warning  'motion' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   6:16  warning  'Loader2' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+  22:25  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/sharayu/Desktop/anigen/components/editor/StoryEditor.tsx:22:25
+  20 |   useEffect(() => {
+  21 |     // Initial content setup
+> 22 |     if (initialContent) setContent(initialContent)
+     |                         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  23 |
+  24 |     // Subscribe to Realtime Story Updates
+  25 |     const channel = supabase.channel(`story:${storyId}`)  react-hooks/set-state-in-effect
+  44:6   warning  React Hook useEffect has missing dependencies: 'content' and 'supabase'. Either include them or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              react-hooks/exhaustive-deps
+
+/Users/sharayu/Desktop/anigen/components/layout/Navbar.tsx
+  28:6  warning  React Hook useEffect has a missing dependency: 'supabase.auth'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/Users/sharayu/Desktop/anigen/lib/ai/nanobanana.ts
+  28:65  warning  'characters' is defined but never used    @typescript-eslint/no-unused-vars
+  28:77  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/sharayu/Desktop/anigen/lib/ai/story-engine.ts
+  19:78  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  41:37  warning  'storyId' is defined but never used       @typescript-eslint/no-unused-vars
+
+/Users/sharayu/Desktop/anigen/lib/ai/veo.ts
+  6:53  warning  'referenceImages' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/sharayu/Desktop/anigen/lib/live/gemini-live.ts
+   8:28  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  10:32  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  37:17  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+✖ 37 problems (19 errors, 18 warnings)
+
