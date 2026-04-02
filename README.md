@@ -1,7 +1,5 @@
 # 🌌 Anigen — Collaborative AI Storytelling Platform
 
-![Anigen Banner](./public/banner.png)
-
 ## 🚀 Overview
 Anigen is a premium, real-time collaborative storytelling platform where users create avatars, co-write stories with friends, and transform them into high-quality animated videos or manga.
 
@@ -59,16 +57,11 @@ It blends social creativity with cutting-edge AI to turn imagination into visual
 ---
 ## 📸 Screenshots / Demo
 
-Add images inside `/public`:
-
-```md
-![Landing Page](./public/anigenlanding.png)
-![](./public/anigenauth.png)
-![](./public/anigen1.png)
-![](./public/anigen2.png)
-![](./public/anigen3.png)
-```
-
+![Landing](./public/anigenlanding.png)
+![Auth](./public/anigenauth.png)
+![Screen1](./public/anigen1.png)
+![Screen2](./public/anigen2.png)
+![Screen3](./public/anigen3.png)
 ---
 
 ## ⚙️ Setup Instructions
